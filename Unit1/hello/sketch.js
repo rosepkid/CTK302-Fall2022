@@ -4,7 +4,7 @@ function setup() {
 }
 
 function draw() {
-  background('red') ;
+  background('pink') ;
   fill('white') ;
   textSize(32) ;
   text("hello world!", 250, 250) ;
