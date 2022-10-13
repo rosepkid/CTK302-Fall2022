@@ -1,17 +1,10 @@
 let song1, song2, song3;
-let state = 0;
+let state = -1;
 
 function preload() {
 	song1 = loadSound("assets/donkey.mp3");
 	song2 = loadSound("assets/skate.mp3");
 	song3 = loadSound("assets/thrill.mp3");
-
-	song1.play();
-	song2.play();
-	song3.play();
-	song1.pause();
-	song2.pause();
-	song3.pause();
 }
 
 function setup() {
@@ -20,6 +13,12 @@ function setup() {
 
 function draw() {
 	switch (state) {
+		case -1:
+			background("black");
+			fill("white");
+			text("Please click to begin the program", width / 2, height / 2);
+			break;
+
 		case 0: // spawn song 1
 			background("red");
 			if (!song1.isPlaying()) {
